@@ -19,7 +19,7 @@ class ChatApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       routes: {
-        Loginviews.id : (Contexr) => Loginviews(),
+        Loginviews.id : (context) => Loginviews(),
         RegisterViews.id : (context) => RegisterViews()
       },
       debugShowCheckedModeBanner: false,
