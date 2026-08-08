@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 class Textfiledwid extends StatelessWidget {
   final String text;
   final bool hidden;
+  final TextEditingController controller;
   const Textfiledwid({
-    super.key, required this.text,this.hidden = false
+    super.key, required this.text,this.hidden = false, required this.controller
   });
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      controller: controller,
       obscureText: hidden,
       style: TextStyle(color: Colors.white),
      keyboardType:  TextInputType.emailAddress,
